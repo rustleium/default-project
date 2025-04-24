@@ -8,6 +8,8 @@
 #desktop {
   background-color: rgb(49, 59, 70);
   height: 100vh;
+  padding: 20px;
+  position: relative;
 }
 
 .icon {
