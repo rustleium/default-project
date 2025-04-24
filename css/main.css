@@ -27,3 +27,19 @@
   width: 300px;
   border: 4px solid white;
 }
+
+.titleBar {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  align-items: center;
+}
+
+.closeBtn {
+  padding: 4px 7px;
+}
+
+.content {
+  padding: 4px;
+}
