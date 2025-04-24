@@ -8,3 +8,13 @@
   background-color: rgb(49, 59, 70);
   height: 100vh;
 }
+
+.icon {
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  width: fit-content;
+  background-color: rgba(128, 156, 185, 0.616);
+  cursor: pointer;
+  user-select: none;
+}
