@@ -11,14 +11,25 @@ closeWin.addEventListener('click', () => {
   aboutWin.style.display = "none";
 })
 
-titleBar.addEventListener('mousedown', () => {
+let isDragging = false;
+let mouseGrabX = 0;
+let mouseGrabY = 0;
 
+titleBar.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  mouseGrabX = e.clientX - aboutWin.offsetLeft;
+  mouseGrabY = e.clientY - aboutWin.offsetTop;
 });
 
-titleBar.addEventListener('mousemove', () => {
-
+titleBar.addEventListener('mousemove', (e) => {
+  if(isDragging) {
+    aboutWin.style.left = (e.clientX - mouseGrabX) + 'px';
+    aboutWin.style.top = (e.clientY - mouseGrabY) + 'px';
+  }
 });
 
 titleBar.addEventListener('mouseup', () => {
-
+  if(isDragging) {
+    isDragging = false;
+  }
 });
