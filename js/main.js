@@ -21,14 +21,14 @@ titleBar.addEventListener('mousedown', (e) => {
   mouseGrabY = e.clientY - aboutWin.offsetTop;
 });
 
-titleBar.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (e) => {
   if(isDragging) {
     aboutWin.style.left = (e.clientX - mouseGrabX) + 'px';
     aboutWin.style.top = (e.clientY - mouseGrabY) + 'px';
   }
 });
 
-titleBar.addEventListener('mouseup', () => {
+document.addEventListener('mouseup', () => {
   if(isDragging) {
     isDragging = false;
   }
