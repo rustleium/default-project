@@ -19,12 +19,14 @@ titleBar.addEventListener('mousedown', (e) => {
   isDragging = true;
   mouseGrabX = e.clientX - aboutWin.offsetLeft;
   mouseGrabY = e.clientY - aboutWin.offsetTop;
+  titleBar.style.cursor = 'grabbing';
 });
 
 document.addEventListener('mousemove', (e) => {
   if(isDragging) {
     aboutWin.style.left = (e.clientX - mouseGrabX) + 'px';
     aboutWin.style.top = (e.clientY - mouseGrabY) + 'px';
+    titleBar.style.cursor = 'grabbing';
   }
 });
 
@@ -32,4 +34,5 @@ document.addEventListener('mouseup', () => {
   if(isDragging) {
     isDragging = false;
   }
+  titleBar.style.cursor = 'move';
 });

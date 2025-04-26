@@ -37,6 +37,8 @@
   justify-content: space-between;
   padding: 4px;
   align-items: center;
+  cursor: move;
+  user-select: none;
 }
 
 .closeBtn {
